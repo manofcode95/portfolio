@@ -1,0 +1,46 @@
+%heading{
+    font-family: $font-display;
+}
+
+.header-1{
+    @extend %heading;
+    font-size: 5rem;
+    // text-align: center;
+    color: $color-grey-dark-1;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.2;
+}
+
+.header-2{
+    @extend %heading;
+    font-size: 4rem;
+    text-align: center;
+    padding:0 15rem;
+    border-bottom: 3px solid #f6f6f6;
+    color: $color-grey-dark-1;
+    display: inline-block;
+    text-transform: uppercase;
+
+    @include respond(med){
+        padding:0 6rem;
+    }
+}
+
+.header-3{
+    @extend %heading;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+
+    &--black{
+        color:black;
+    }
+}
+
+.header-4{
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: $color-grey-dark-1;
+}

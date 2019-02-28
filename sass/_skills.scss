@@ -1,0 +1,116 @@
+.skills{
+    padding:10rem 0;
+    grid-column: center-start/center-end;
+    grid-row:3/4;
+}
+
+.skill__container{
+    display:grid;
+    padding:0 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-column-gap: 6rem;
+    
+    // overflow: hidden;
+
+    @include respond(large){
+        grid-template-columns: minmax(min-content, 40rem);
+        // grid-template-columns: minmax(min-content, 20rem);
+        justify-content: center;
+        grid-column-gap: 0rem;
+        grid-row-gap: 6rem;
+    } 
+}
+
+.skill{
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    display:grid;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    justify-items: center;
+    z-index: 1;
+    padding: 3rem;
+    align-items:start;
+    align-content: start;
+    overflow: hidden;
+    transition: .3s;
+    margin-bottom: -1px;
+    &-2{
+        background:linear-gradient(-45deg, #f403d1, #64b5f6)
+    }
+
+    &-1{
+        background:linear-gradient(-45deg, #ffec61, #f321d7)
+    }
+
+    &-3{
+        background:linear-gradient(-45deg, #24ff72, #48a1eb)
+    }
+
+    &::before{
+        content:"";
+        position: absolute;
+        display:block;
+        width:100%;
+        height: 100%;
+        left:0;
+        top: 55% ;
+        background:rgba(255,255,255, .1);
+        transform: skewY(-7deg);
+        z-index: 1;
+    }
+    
+    &__header{
+        text-align: center;
+    }
+    &__icon-box{
+        width:9rem;
+        height: 9rem;
+        border-radius: 50%;
+        display: block;
+        background:white;
+        z-index: 2;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+
+        &-2{
+            background:linear-gradient(-45deg, #f403d1, #64b5f6)
+        }
+    
+        &-1{
+            background:linear-gradient(-45deg, #ffec61, #f321d7)
+        }
+    
+        &-3{
+            background:linear-gradient(-45deg, #24ff72, #3c96e0)
+        }
+    }
+
+    &__icon{
+        width:5.5rem;
+        height:5.5rem;
+        fill:white;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__list{
+        // list-style: none;
+        margin-top:1.5rem;
+    }
+    
+    &__item{
+        font-size: 1.6rem;
+        color:white;
+        font-family: $font-display;
+    }
+
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
+    }
+}

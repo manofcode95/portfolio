@@ -1,0 +1,93 @@
+.footer{
+    background-image: linear-gradient(to bottom, #86377b 20%, #27273c 80%);
+    background: #333;
+    grid-column: 1/-1;
+    grid-row:6/7;
+    padding:4rem 8rem;
+    display:grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-gap: 3rem;
+    align-items: start;
+    color:white;
+
+
+    @include respond(large){
+        grid-template-columns: minmax(min-content, 1fr);
+        justify-items: center;
+    }
+
+    &__details{
+        margin-left: 3rem;
+        justify-self: end;
+        @include respond(large){
+            justify-self: center;
+            margin-left: 0rem;
+        } 
+    }
+
+    &__logo{
+        grid-column: 1/-1;
+        margin:0 auto;
+        width:10rem;
+        height:10rem;
+    }
+    &__text{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+
+        @include respond(large){
+            justify-content: center;
+            margin-top: 1.5rem;
+        }   
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 3rem;
+        }
+    }
+
+    &__link, &__icon{
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+            font-size: 1.6rem;
+            color:white;
+            text-transform: uppercase;
+            display: block;
+            transition: .3s;
+            outline:none;
+        }
+
+        &:hover,
+        &:active{
+            background:#333;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .7);
+            transform: rotate(5deg) scale(1.1);
+            color:$color-primary;
+            fill:$color-primary;
+            
+    }
+        
+    }
+
+    &__icon-box{
+        outline:none;
+    }
+    &__icon{
+        width:3rem;
+        height:3rem;
+        fill:white;
+        transition: .3s;
+        position: relative;
+    }
+
+}

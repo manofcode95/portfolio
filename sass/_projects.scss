@@ -1,0 +1,144 @@
+.projects{
+    grid-column: center-start/ center-end;
+    grid-row:5/6;
+    padding:10rem 6rem;
+    margin:auto;
+    @include respond(large){
+        padding:6rem 4rem;
+    }
+}
+
+.project__container{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(15rem, 1fr));
+    grid-gap: 6rem;
+    
+    
+}
+
+.project{
+    display:grid;
+    grid-template-columns: minmax(min-content, 30rem) 1fr;
+    grid-gap: 3rem;
+
+    @include respond(med){
+        grid-template-columns: minmax(min-content, 50rem);
+        
+    }
+
+    &:not(:last-child){
+        margin-bottom: 6rem;
+    }
+    &__header{
+        text-align: center;
+    };
+
+    &__img-box{
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .25);
+        position: relative;
+        transition: .3s;
+
+        &:hover{
+            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .5);
+            transform: translateY(-4px);
+        }
+    }
+
+    &__img{ 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: .5s;
+        transform: scale(1);
+        
+    }
+
+ 
+    &__details{
+
+    }
+
+    &__description{
+        font-size: 1.6rem;
+    }
+
+    &__tag{
+        list-style: none;
+        display:flex;
+        margin-top: 2rem;
+
+    }
+    &__item{
+        &:not(:last-child){
+            margin-right: .5rem;
+        }
+
+        padding:0.5rem 1rem;
+        border-radius: 100px;
+        background: #964bc1;
+        color:white
+
+    }
+
+    
+    &__link{
+        position: absolute;
+        bottom:20%;   
+        transform: translate(-50%, 50%);
+        transition: .5s;
+        opacity:0;
+        visibility: hidden;
+        &-1{
+            left:40%;
+
+            @include respond(large){
+                left:35%;
+            }
+        }
+
+        &-2{
+            left:60%;
+
+            @include respond(large){
+                left:65%;
+            }
+        }
+    }
+    &__icon{
+        width:5rem;
+        height: 5rem;
+        fill:white;
+        transition: .5s;
+        z-index: 2;
+    }
+
+
+    &__bg{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0, 0, 0, .0);
+        transition: .5s;
+    }
+
+    &__img-box:hover &__bg{     
+        background:rgba(0, 0, 0, 0.788);
+        background:linear-gradient(-45deg, rgba(242, 2, 206, 0.9), rgba(100, 180, 246, 0.9));
+    }
+
+    &__img-box:hover &__img{     
+        transform: scale(1.1);
+    }
+
+    &__img-box:hover &__link{     
+        bottom:50%;
+        visibility: visible;
+        opacity: 1;
+    }
+}

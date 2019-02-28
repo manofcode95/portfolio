@@ -1,0 +1,155 @@
+@keyframes wave{
+    0%{
+        background-position: left 0 bottom 0;
+        transform: scaleY(1);
+    }
+
+    50%{
+        background-position: left 50% bottom 0;
+        transform:  scaleY(.55);
+    }
+
+    100%{
+        background-position: left 100% bottom 0;
+        transform: scaleY(1);
+    }
+}
+
+.header{
+    height:100%;
+    position: relative;
+    overflow: hidden;
+    grid-column: 1/-1;
+    grid-row: 1/3;
+    display: grid;
+    background-image: $bg-primary;
+    grid-template-columns: minmax(5rem, 1fr) min-content minmax(min-content, 100rem) minmax(5rem, 1fr);
+    grid-column-gap: 10rem;
+    align-items: center;
+
+    @include respond(large){
+        grid-template-columns: minmax(5rem, 1fr) minmax(min-content, 70rem) minmax(5rem, 1fr);
+        grid-column-gap: 0rem;
+        align-items: center;
+        align-content: start;
+        
+    }
+
+    @include respond(med){
+        display:flex;
+        flex-direction: column;
+        padding:0 4rem;
+    }
+    &__logo-box{
+        grid-column: 2/3;
+        margin-top: -15rem;
+        position: relative;
+
+        @include respond(large){
+            margin-top: 0rem;
+            display:grid;
+            justify-items: center;
+        }
+    }
+
+    &__logo{
+        position: relative;
+        display: block; 
+        @include respond(large){
+            margin-bottom: 5rem;
+            height: 15rem;
+            margin-top: 5rem;
+        }
+    }
+    &__shadow{
+        position: absolute;
+        height:2rem;
+        width:100%;
+        background:black;
+        margin:0 auto;
+        bottom: -5rem;
+        left:50%;
+        border-radius: 50%;
+        transform: translate(-50%, 0);
+        background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+
+        @include respond(large){
+            bottom: 0rem;
+            width: 15rem;
+        }
+    }
+
+    &__text-box{
+        grid-column: 3/4;
+        margin-top: -15rem;
+        z-index: 20;
+
+        @include respond(large){
+            grid-column: 2/3;
+            margin-top: 3rem;
+
+        }
+    }
+    &__description{
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        font-size: 1.7rem;
+        color:white;
+    }
+    &__wave-box{
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        bottom:-1px;
+        bottom: -1px;
+        
+    
+        // background-image: linear-gradient(to top, #ffec61 20%, #f321d7 80%);
+    &--top{
+        z-index: 15;
+        opacity: 0.5;
+    }
+
+    &--mid{
+        z-index: 10;
+        opacity: 0.75;
+    }
+
+    &--bot{
+        z-index: 5;
+    }
+}
+
+&__wave{
+    position: absolute;
+    // bottom: 0px;
+    left:0;
+    width:200%;
+    height:100%;  
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+    // overflow: hidden;
+
+    &--top{ 
+        background-image:url(../img/wave4.png);
+        background-size: 50% 130px;
+        animation: wave 10s infinite linear ;
+        
+    }
+
+    &--mid{
+         background-image:url(../img/wave6.png);    
+        animation: wave 13s infinite linear;
+        background-size: 50% 120px;
+    }
+
+    &--bot{
+        background-image:url(../img/wave7.png);    
+        background-size: 50% 100px;
+        animation: wave 18s infinite linear ;
+    }
+}
+
+}

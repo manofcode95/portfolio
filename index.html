@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="">
+    <title>Portfolio | Chau Nguyen</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <input type="checkbox" class="navigation__input" id="checkbox">
+            <label for="checkbox" class="navigation__icon-box">
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__background"></div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#home" class="navigation__link btn btn--expand">1. Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#skills" class="navigation__link btn btn--expand">2. Skills</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#projects" class="navigation__link btn btn--expand">3. Projects</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#contact" class="navigation__link btn btn--expand">4 .Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <header class="header" id="home">
+            <!-- <div class="header__details"> -->
+            <div class="header__logo-box">
+                <img src="./img/logo2.svg" alt="" class="header__logo">
+                <div class="header__shadow"></div>
+            </div>
+            <div class="header__text-box">
+                <h1 class="header-1">Front-end Web Developer</h1>
+                <p class="header__description">My name is Chau. I have a serious passion for web development and
+                    technology.
+                    As a self-taught developer, I am particularly satisfied with problems solving and researching
+                    new
+                    things. </p>
+                <a href="#" class="btn btn--spill">View CV</a>
+            </div>
+
+            <!-- </div> -->
+
+            <div class="header__wave-box header__wave-box--top">
+                <div class="header__wave header__wave--top"></div>
+            </div>
+            <div class="header__wave-box header__wave-box--mid">
+                <div class="header__wave header__wave--mid"></div>
+            </div>
+            <div class="header__wave-box header__wave-box--bot">
+                <div class="header__wave header__wave--bot"></div>
+            </div>
+        </header>
+        <section class="skills" id="skills">
+            <div class="skill__header">
+                <h2 class="header-2 mb-6">Skills</h2>
+            </div>
+            <div class="skill__container">
+                <div class="skill skill-1">
+                    <div class="skill__icon-box skill__icon-box-1">
+                        <svg class="skill__icon">
+                            <use xlink:href="./img/sprite.svg#icon-wrench"></use>
+                        </svg>
+                    </div>
+                    <h3 class="header-3">Frameworks</h3>
+
+                    <ul class="skill__list">
+                        <li class="skill__item">Bootstrap</li>
+                        <li class="skill__item">Django</li>
+                    </ul>
+                </div>
+                <div class="skill skill-2">
+                    <div class="skill__icon-box skill__icon-box-2">
+                        <svg class="skill__icon">
+                            <use xlink:href="./img/sprite.svg#icon-pencil2"></use>
+                        </svg>
+                    </div>
+                    <h3 class="header-3">Languages</h3>
+                    <ul class="skill__list">
+                        <li class="skill__item">HTML, CSS, SASS</li>
+                        <li class="skill__item">Javascript</li>
+                        <li class="skill__item">Python</li>
+                    </ul>
+                </div>
+                <div class="skill skill-3">
+                    <div class="skill__icon-box skill__icon-box-3">
+                        <svg class="skill__icon">
+                            <use xlink:href="./img/sprite.svg#icon-display"></use>
+                        </svg>
+                    </div>
+                    <h3 class="header-3">Version Control</h3>
+                    <ul class="skill__list">
+                        <li class="skill__item">Git (Git shell & Github)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="quote">
+            <svg class="quote__icon">
+                <use xlink:href="./img/sprite.svg#icon-quotes-left"></use>
+            </svg>
+            <blockquote class="quote__text">
+                Passionate developer, not about a specific stack or a language but about the
+                state of
+                the art technology
+                and modern web development methods. </blockquote>
+        </div>
+        <section class="projects" id="projects">
+            <div class="project__header">
+                <h2 class="header-2 mb-6">Projects</h2>
+            </div>
+
+            <div class="project">
+                <div class="project__img-box">
+                    <img src="./img/Capture.JPG" alt="" class="project__img">
+                    <div class="project__bg">&nbsp;</div>
+                    <a href="https://manofcode95.github.io/Natours-SCSS-BEM/" class="project__link project__link-1">
+                        <svg class="project__icon project__icon-1 ">
+                            <use xlink:href="./img/sprite.svg#icon-display"></use>
+                        </svg>
+                    </a>
+                    <a href="https://manofcode95.github.io/Natours-SCSS-BEM/" class="project__link project__link-2">
+                        <svg class="project__icon project__icon-2">
+                            <use xlink:href="./img/sprite.svg#icon-github"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="project__details">
+                    <h4 class="header-4">Natours</h4>
+                    <p class="project__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Dignissimos
+                        odio omnis cupiditate sed labore au.</p>
+                    <ul class="project__tag">
+                        <li class="project__item">HTML</li>
+                        <li class="project__item">CSS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project__img-box">
+                    <img src="./img/Capture2.JPG" alt="" class="project__img">
+                    <div class="project__bg">&nbsp;</div>
+                    <a href="https://github.com/manofcode95/Trillio-Flexbox" class="project__link project__link-1">
+                        <svg class="project__icon project__icon-1 ">
+                            <use xlink:href="./img/sprite.svg#icon-display"></use>
+                        </svg>
+                    </a>
+                    <a href="https://manofcode95.github.io/Trillio-Flexbox/" class="project__link project__link-2">
+                        <svg class="project__icon project__icon-2">
+                            <use xlink:href="./img/sprite.svg#icon-github"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="project__details">
+                    <h4 class="header-4">Trillo</h4>
+                    <p class="project__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Dignissimos
+                        odio omnis cupiditate sed labore au.</p>
+                    <ul class="project__tag">
+                        <li class="project__item">HTML</li>
+                        <li class="project__item">CSS</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <footer class="footer" id="contact">
+            <img src="./img/logo2.svg" alt="" class="footer__logo">
+            <nav class="footer__nav">
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#home" class="footer__link">home</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#skills" class="footer__link">skills</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#projects" class="footer__link">projects</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#contact" class="footer__link">contact</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="footer__details">
+                <p class="footer__text">Living, learning, & leveling up one day at a time.</p>
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="https://github.com/manofcode95" class="footer__icon-box">
+                            <svg class="footer__icon footer__icon--1">
+                                <use xlink:href="./img/sprite.svg#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a href="mailto:chaunguyentw@gmail.com" class="footer__icon-box">
+                            <svg class="footer__icon footer__icon--2">
+                                <use xlink:href="./img/sprite.svg#icon-mail2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="./js//script.js"></script>
+</body>
+
+</html>

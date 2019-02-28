@@ -1,0 +1,68 @@
+//VARIABLES
+$color-grey-dark-1:#504f4f;
+$color-primary: #86377b;
+$bg-primary: linear-gradient(to top, #86377b 20%, #27273c 80%);
+// FONT VARIABLES
+$font-primary: 'Lato', sans-serif;
+$font-display: 'Roboto', sans-serif;
+
+// UTILITIES
+.mb-5{
+    margin-bottom: 5rem;
+}
+
+.mb-6{
+    margin-bottom: 6rem;
+}
+
+@mixin respond($breakpoint){
+    @if $breakpoint==largest {
+        @media screen and (max-width:68.75rem){@content}
+    }; //1100px;
+
+    @if $breakpoint==large {
+        @media screen and (max-width:56.25rem){@content}
+    }; //900px;
+
+    @if $breakpoint==med {
+        @media screen and (max-width:40.625rem){@content}
+    }; //650px;
+}
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit
+}
+
+html{
+    font-size: 62%;//10px
+    box-sizing: border-box;
+    
+
+    @include respond(largest){
+        font-size: 56.25%;//9px
+    }
+
+    @include respond(med){
+        font-size: 50%;//8px
+    }
+
+}
+
+body{
+    font-family: $font-display;
+    line-height: 1.6;
+    font-weight: 300;
+    // color:$color-grey-dark-2;
+    
+}
+
+.container{
+    display:grid;
+    grid-template-rows: 6rem calc(95vh - 6rem);
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content ,14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+    // grid-gap: 6rem;
+}

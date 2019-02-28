@@ -1,0 +1,154 @@
+@keyframes moveRightIn{
+    0%{
+        left:100%;    
+    }
+
+    80%{
+        left:47%;
+    }
+
+    100%{
+        left:50%;
+   }
+}
+
+.navigation{
+    background: transparent;
+    grid-column: 1/-1;
+    grid-row:1/2;
+    display: block;
+    z-index: 100;
+    // position: relative;
+    &__input{
+        display:none;
+    }
+
+    &__icon-box{
+        position: fixed;
+        width:7rem;
+        height:7rem;
+        border-radius: 50%;
+        background:white;
+        top:4rem;
+        right:5rem;
+        z-index: 105;
+        transition: .5s;
+        box-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
+
+
+    }
+
+
+    &__background{
+        position: fixed;
+        width:4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        background:rgba(0, 0, 0, 0.95);
+        top:5.3rem;
+        right:6.3rem;
+        z-index: 100;
+        transition: .5s;   
+
+        // transform: scale(80);   
+    }
+
+    &__input:checked ~ &__background{
+        transform: scale(80);
+    }
+
+    &__icon{
+        position: absolute;
+        width:3rem;
+        height: 2px;
+        background: black;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond(largest){
+            height:1.5px;
+        }
+
+        &::before,
+        &::after{
+            content:""; 
+            background:black;   
+            left:0;
+            position: absolute;
+            display: block;
+            height:1.5px;
+            width: 100%;
+            transition: transform .8s, top .2s;    
+            transform-origin:(left);
+   
+        }
+
+        &::before{
+            top:-.8rem;
+        }
+
+        &::after{
+            top:.8rem;
+        }
+        
+    }
+
+    &__icon-box:hover &__icon{
+        height: 1.8px;
+        &::before{
+            top:-1.11rem;           
+        }
+
+        &::after{
+            top:1.11rem;
+        }
+    }
+
+    
+    &__input:checked + &__icon-box &__icon{
+        background: transparent;
+
+        &::before{
+            transform: rotate(-315deg);
+            top:0rem; 
+        }
+
+        &::after{
+            transform: rotate(315deg);
+            top:0rem; 
+        }
+    }
+
+    &__list{
+        list-style: none;
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        padding:3rem;
+        // transition: visibility .3s;
+    }
+
+    &__input:checked ~ &__nav &__list{
+        animation: moveRightIn .5s forwards;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+
+        padding: 1rem 2rem;
+        position: relative;
+        overflow: hidden;
+        transition: .4s;
+    }
+
+}
