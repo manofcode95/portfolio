@@ -40,6 +40,9 @@ body {
   text-transform: uppercase;
   color: white;
   line-height: 1.2; }
+  @media screen and (max-width: 56.25rem) {
+    .header-1 {
+      font-size: 4.5rem; } }
 
 .header-2 {
   font-size: 4rem;
@@ -234,17 +237,31 @@ body {
       @media screen and (max-width: 56.25rem) {
         .project__link-1 {
           left: 35%; } }
+      @media screen and (max-width: 40.625rem) {
+        .project__link-1 {
+          left: 40%; } }
     .project__link-2 {
       left: 60%; }
       @media screen and (max-width: 56.25rem) {
         .project__link-2 {
           left: 65%; } }
-  .project__icon {
+      @media screen and (max-width: 40.625rem) {
+        .project__link-2 {
+          left: 60%; } }
+    @media (hover: none) {
+      .project__link {
+        position: relative; } }
+  .project__icon-1 {
     width: 5rem;
     height: 5rem;
     fill: white;
     transition: .5s;
     z-index: 2; }
+  .project__icon-2 {
+    width: 4rem;
+    height: 4rem;
+    fill: #333;
+    margin-right: 2rem; }
   .project__bg {
     position: absolute;
     top: 0;
@@ -397,6 +414,11 @@ body {
         margin-bottom: 5rem;
         height: 15rem;
         margin-top: 5rem; } }
+    @media screen and (max-width: 40.625rem) {
+      .header__logo {
+        margin-bottom: 3rem;
+        height: 13rem;
+        margin-top: 3rem; } }
   .header__shadow {
     position: absolute;
     height: 2rem;
@@ -430,7 +452,6 @@ body {
     width: 100%;
     overflow: hidden;
     height: 100%;
-    bottom: -1px;
     bottom: -1px; }
     .header__wave-box--top {
       z-index: 15;
@@ -452,14 +473,23 @@ body {
       background-image: url(../img/wave4.png);
       background-size: 50% 130px;
       animation: wave 10s infinite linear; }
+      @media screen and (max-width: 40.625rem) {
+        .header__wave--top {
+          background-size: 30% 50px; } }
     .header__wave--mid {
       background-image: url(../img/wave6.png);
       animation: wave 13s infinite linear;
       background-size: 50% 120px; }
+      @media screen and (max-width: 40.625rem) {
+        .header__wave--mid {
+          background-size: 30% 40px; } }
     .header__wave--bot {
       background-image: url(../img/wave7.png);
       background-size: 50% 100px;
       animation: wave 18s infinite linear; }
+      @media screen and (max-width: 40.625rem) {
+        .header__wave--bot {
+          background-size: 30% 30px; } }
 
 .footer {
   background-image: linear-gradient(to bottom, #86377b 20%, #27273c 80%);

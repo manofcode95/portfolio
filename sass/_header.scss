@@ -60,6 +60,13 @@
             height: 15rem;
             margin-top: 5rem;
         }
+
+        @include respond(med){
+            margin-bottom: 3rem;
+            height: 13rem;
+            margin-top: 3rem;
+        }
+
     }
     &__shadow{
         position: absolute;
@@ -102,54 +109,62 @@
         overflow: hidden;
         height: 100%;
         bottom:-1px;
-        bottom: -1px;
         
-    
-        // background-image: linear-gradient(to top, #ffec61 20%, #f321d7 80%);
-    &--top{
-        z-index: 15;
-        opacity: 0.5;
+        &--top{
+            z-index: 15;
+            opacity: 0.5;
+        }
+
+        &--mid{
+            z-index: 10;
+            opacity: 0.75;
+        }
+
+        &--bot{
+            z-index: 5;
+        }
     }
 
-    &--mid{
-        z-index: 10;
-        opacity: 0.75;
-    }
+    &__wave{
+        position: absolute;
+        left:0;
+        width:200%;
+        height:100%;  
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        transform-origin: center bottom;
+        // overflow: hidden;
 
-    &--bot{
-        z-index: 5;
-    }
-}
+        &--top{ 
+            background-image:url(../img/wave4.png);
+            background-size: 50% 130px;
+            animation: wave 10s infinite linear ;
 
-&__wave{
-    position: absolute;
-    // bottom: 0px;
-    left:0;
-    width:200%;
-    height:100%;  
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-    // overflow: hidden;
+            @include respond(med){
+                background-size: 30% 50px;
+            }
+            
+        }
 
-    &--top{ 
-        background-image:url(../img/wave4.png);
-        background-size: 50% 130px;
-        animation: wave 10s infinite linear ;
-        
-    }
+        &--mid{
+            background-image:url(../img/wave6.png);    
+            animation: wave 13s infinite linear;
+            background-size: 50% 120px;
 
-    &--mid{
-         background-image:url(../img/wave6.png);    
-        animation: wave 13s infinite linear;
-        background-size: 50% 120px;
-    }
+            @include respond(med){
+                background-size: 30% 40px;
+            }
+        }
 
-    &--bot{
-        background-image:url(../img/wave7.png);    
-        background-size: 50% 100px;
-        animation: wave 18s infinite linear ;
+        &--bot{
+            background-image:url(../img/wave7.png);    
+            background-size: 50% 100px;
+            animation: wave 18s infinite linear ;
+
+            @include respond(med){
+                background-size: 30% 30px;
+            }
+        }
     }
-}
 
 }

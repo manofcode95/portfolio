@@ -98,6 +98,10 @@
             @include respond(large){
                 left:35%;
             }
+
+            @include respond(med){
+                left:40%;
+            }
         }
 
         &-2{
@@ -106,14 +110,34 @@
             @include respond(large){
                 left:65%;
             }
+
+            @include respond(med){
+                left:60%;
+            }
+        }
+
+        @include respond(no-hov){
+            position: relative;
         }
     }
     &__icon{
-        width:5rem;
-        height: 5rem;
-        fill:white;
-        transition: .5s;
-        z-index: 2;
+        &-1{
+            width:5rem;
+            height: 5rem;
+            fill:white;
+            transition: .5s;
+            z-index: 2;
+        }
+
+        &-2{
+            width:4rem;
+            height: 4rem;
+            fill:#333;
+            // fill:$color-primary;
+            margin-right: 2rem;
+            
+        }
+        
     }
 
 
